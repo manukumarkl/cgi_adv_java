@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Management</title>
+</head>
+<body>
+    <h1>Account Management</h1>
+    <form action="/create" method="post">
+        <h2>Create Account</h2>
+        <input type="text" name="name" placeholder="Name" required/><br/>
+        <input type="number" name="amount" placeholder="Amount" required/><br/>
+        <button type="submit">Create</button>
+    </form>
+
+    <form action="/deposit" method="post">
+        <h2>Deposit</h2>
+        <input type="number" name="accno" placeholder="Account Number" required/><br/>
+        <input type="number" name="amount" placeholder="Amount" required/><br/>
+        <input type="text" name="panCardNumber" placeholder="PAN Card Number (if applicable)"/><br/>
+        <button type="submit">Deposit</button>
+    </form>
+
+    <form action="/withdraw" method="post">
+        <h2>Withdraw</h2>
+        <input type="number" name="accno" placeholder="Account Number" required/><br/>
+        <input type="number" name="amount" placeholder="Amount" required/><br/>
+        <button type="submit">Withdraw</button>
+    </form>
+
+    <form action="/balance" method="get">
+        <h2>Check Balance</h2>
+        <input type="number" name="accno" placeholder="Account Number" required/><br/>
+        <button type="submit">Check Balance</button>
+    </form>
+</body>
+</html>
